@@ -1,0 +1,26 @@
+{
+    "name": "azoth",
+    "displayName": "Azoth",
+    "description": "Azoth language support",
+    "version": "0.0.1",
+    "publisher": "azoth-lang",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "azoth",
+            "aliases": ["Azoth", "azoth"],
+            "extensions": [".az"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "azoth",
+            "scopeName": "source.azoth",
+            "path": "./syntaxes/azoth.tmLanguage.json"
+        }]
+    }
+}

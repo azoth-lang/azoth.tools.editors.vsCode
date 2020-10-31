@@ -1,0 +1,224 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Azoth",
+    "patterns": [{
+            "include": "#keywords"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#string-literal"
+        },
+        {
+            "include": "#char-literal"
+        },
+        {
+            "include": "#modifiers"
+        },
+        {
+            "include": "#punctuation"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#reserved-words"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                    "name": "keyword.control.azoth",
+                    "match": "\\b(?<!\\\\)(if|else|match|loop|while|foreach|in|break|next|return|yield|throw|try)\\b"
+                },
+                {
+                    "name": "keyword.other.azoth",
+                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|copy|tag)\\b"
+                },
+                {
+                    "name": "keyword.other.using.azoth",
+                    "match": "\\b(?<!\\\\)(using)\\b"
+                },
+                {
+                    "name": "keyword.modifier.azoth",
+                    "match": "\\b(?<!\\\\)(safe|unsafe|abstract|override)\\b"
+                },
+                {
+                    "name": "keyword.contract.azoth",
+                    "match": "\\b(?<!\\\\)(invariant|requires|ensures)\\b"
+                },
+                {
+                    "name": "keyword.effect.azoth",
+                    "match": "\\b(?<!\\\\)(may|no)\\b"
+                },
+                {
+                    "name": "keyword.type.azoth",
+                    "match": "\\b(?<!\\\\)(bool|string|u?int\\d*|byte|float\\d*|u?fixed\\d+\\.\\d+|decimal\\d*|size|offset|void|never|Self|Any|type)\\b"
+                },
+                {
+                    "name": "variable.language.azoth",
+                    "match": "\\b(?<!\\\\)(self|base)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [{
+                    "comment": "Needs to come before assignment operator so this match has precedence",
+                    "name": "keyword.operator.comparison.azoth",
+                    "match": "==|=/="
+                },
+                {
+                    "comment": "Needs to come before subtract operator",
+                    "name": "keyword.operator.arrow.azoth",
+                    "match": "->"
+                },
+                {
+                    "name": "keyword.operator.assignment.azoth",
+                    "match": "="
+                },
+                {
+                    "name": "keyword.operator.expression.azoth",
+                    "match": "\\b(?<!\\\\)(and|or|not|as)\\b"
+                },
+                {
+                    "name": "keyword.operator.new.azoth",
+                    "match": "\\b(?<!\\\\)(new|init)\\b"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.azoth",
+                    "match": "(\\+)|(\\-)|(\\*)|(\\/(?!\\/|\\*))"
+                },
+                {
+                    "name": "keyword.operator.relational.azoth",
+                    "match": ">=|<=|>|<"
+                },
+                {
+                    "name": "keyword.operator.reachability.azoth",
+                    "match": "\\~\\>|\\<\\~"
+                }
+            ]
+        },
+        "string-literal": {
+            "name": "string.quoted.double.azoth",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.azoth",
+                "match": "\\\\."
+            }]
+        },
+        "char-literal": {
+            "name": "string.quoted.single.cs",
+            "begin": "'",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.char.begin.cs"
+                }
+            },
+            "comment": "Need to account for ''' and '\\''",
+            "end": "(?:\\'|\\\\)?(\\')|((?:[^\\n])$)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.char.end.cs"
+                },
+                "2": {
+                    "name": "invalid.illegal.newline.cs"
+                }
+            },
+            "patterns": [{
+                "include": "#string-character-escape"
+            }]
+        },
+        "string-character-escape": {
+            "name": "constant.character.escape.cs",
+            "match": "\\\\."
+        },
+        "modifiers": {
+            "patterns": [{
+                    "name": "storage.modifier.visibility.azoth",
+                    "match": "\\b(?<!\\\\)(published|public|protected)\\b"
+                },
+                {
+                    "name": "storage.modifier.azoth",
+                    "match": "\\b(?<!\\\\)(iso|trn|mut|shared|lent|const|id)\\b"
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [{
+                "name": "punctuation.parenthesis.open.azoth",
+                "match": "\\("
+            }]
+        },
+        "comments": {
+            "patterns": [{
+                    "name": "comment.block.cs",
+                    "begin": "/\\*",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.cs"
+                        }
+                    },
+                    "end": "\\*/",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.cs"
+                        }
+                    }
+                },
+                {
+                    "name": "comment.line.double-slash.cs",
+                    "begin": "(?<!/)//(?!/)",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.azoth"
+                        }
+                    },
+                    "end": "(?=$)"
+                },
+                {
+                    "name": "comment.block.documentation.cs",
+                    "begin": "(?<!/)///(?!/)",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.azoth"
+                        }
+                    },
+                    "end": "(?=$)"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [{
+                    "name": "constant.language.none.azoth",
+                    "match": "\\b(?<!\\\\)(none)\\b"
+                },
+                {
+                    "name": "constant.language.boolean.true.azoth",
+                    "match": "\\b(?<!\\\\)(true)\\b"
+                },
+                {
+                    "name": "constant.language.boolean.false.azoth",
+                    "match": "\\b(?<!\\\\)(false)\\b"
+                }
+            ]
+        },
+        "reserved-words": {
+            "patterns": [{
+                "name": "invalid.reserved-word.azoth",
+                "match": "\\b(?<!\\\\)(alias|case|cast|checked|const_cast|continue|default|defer|delete|do|dynamic_cast|extend|extension|fallthrough|for|guard|internal|null|otherwise|package|partial|private|reinterpret_cast|repeat|replace|select|sizeof|size_of|switch|symmetric|transmute|then|type|unchecked|unless|when|xor|yield)\\b"
+            }]
+        },
+        "reserved-operators": {
+            "patterns": [{
+                "name": "invalid.reserved-word.azoth",
+                "match": "\\b(\\*\\*|##|#|`)\\b"
+            }]
+        }
+    },
+    "scopeName": "source.azoth"
+}
