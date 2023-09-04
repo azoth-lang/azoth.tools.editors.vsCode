@@ -37,7 +37,7 @@
                 },
                 {
                     "name": "keyword.other.azoth",
-                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|copy|tag)\\b"
+                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|copy)\\b"
                 },
                 {
                     "name": "keyword.other.using.azoth",
@@ -144,7 +144,7 @@
                 },
                 {
                     "name": "storage.modifier.azoth",
-                    "match": "\\b(?<!\\\\)(iso|trn|mut|shared|lent|const|id)\\b"
+                    "match": "\\b(?<!\\\\)(iso|mut|const|id)\\b"
                 }
             ]
         },
