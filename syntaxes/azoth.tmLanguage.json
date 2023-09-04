@@ -37,7 +37,7 @@
                 },
                 {
                     "name": "keyword.other.azoth",
-                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|copy)\\b"
+                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy)\\b"
                 },
                 {
                     "name": "keyword.other.using.azoth",
