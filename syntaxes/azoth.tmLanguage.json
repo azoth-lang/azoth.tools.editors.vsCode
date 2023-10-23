@@ -82,7 +82,7 @@
                 },
                 {
                     "name": "keyword.operator.expression.azoth",
-                    "match": "\\b(?<!\\\\)(and|or|not|as)\\b"
+                    "match": "\\b(?<!\\\\)(and|or|not|as|as!|as\\?|is)\\b"
                 },
                 {
                     "name": "keyword.operator.new.azoth",
