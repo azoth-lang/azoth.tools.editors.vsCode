@@ -82,7 +82,7 @@
                 },
                 {
                     "name": "keyword.operator.expression.azoth",
-                    "match": "\\b(?<!\\\\)(and|or|not|as|as!|as\\?|is)\\b"
+                    "match": "\\b(?<!\\\\)((as\\!|as\\?)|((and|or|not|as|is)\\b))"
                 },
                 {
                     "name": "keyword.operator.new.azoth",
@@ -95,10 +95,6 @@
                 {
                     "name": "keyword.operator.relational.azoth",
                     "match": ">=|<=|>|<"
-                },
-                {
-                    "name": "keyword.operator.reachability.azoth",
-                    "match": "\\~\\>|\\<\\~"
                 }
             ]
         },
