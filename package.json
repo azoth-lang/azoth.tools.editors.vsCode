@@ -14,7 +14,7 @@
         "languages": [{
             "id": "azoth",
             "aliases": ["Azoth", "azoth"],
-            "extensions": [".az"],
+            "extensions": [".az", ".azt"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{

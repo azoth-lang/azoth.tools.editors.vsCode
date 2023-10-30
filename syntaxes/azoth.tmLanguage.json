@@ -74,7 +74,7 @@
                 {
                     "comment": "Needs to come before subtract operator",
                     "name": "keyword.operator.arrow.azoth",
-                    "match": "->"
+                    "match": "->|=>"
                 },
                 {
                     "name": "keyword.operator.assignment.azoth",
@@ -95,12 +95,16 @@
                 {
                     "name": "keyword.operator.relational.azoth",
                     "match": ">=|<=|>|<"
+                },
+                {
+                    "name": "keyword.operator.attribute.azoth",
+                    "match": "#"
                 }
             ]
         },
         "string-literal": {
             "name": "string.quoted.double.azoth",
-            "begin": "\"",
+            "begin": "(?<!\\\\)\"",
             "end": "\"",
             "patterns": [{
                 "name": "constant.character.escape.azoth",
@@ -145,10 +149,32 @@
             ]
         },
         "punctuation": {
-            "patterns": [{
-                "name": "punctuation.parenthesis.open.azoth",
-                "match": "\\("
-            }]
+            "patterns": [
+                {
+                    "name": "punctuation.parenthesis.open.azoth",
+                    "match": "\\("
+                },
+                {
+                    "name": "punctuation.parenthesis.close.azoth",
+                    "match": "\\)"
+                },
+                {
+                    "name": "punctuation.curlybrace.open.azoth",
+                    "match": "{"
+                },
+                {
+                    "name": "punctuation.curlybrace.close.azoth",
+                    "match": "}"
+                },
+                {
+                    "name": "punctuation.definition.typeparameters.begin.azoth",
+                    "match": "\\["
+                },
+                {
+                    "name": "punctuation.definition.typeparameters.end.azoth",
+                    "match": "\\]"
+                }
+            ]
         },
         "comments": {
             "patterns": [{
@@ -212,7 +238,7 @@
         "reserved-operators": {
             "patterns": [{
                 "name": "invalid.reserved-word.azoth",
-                "match": "\\b(\\*\\*|##|#|`)\\b"
+                "match": "\\b(\\*\\*|##|`)\\b"
             }]
         }
     },
