@@ -33,7 +33,7 @@
         "keywords": {
             "patterns": [{
                     "name": "keyword.control.azoth",
-                    "match": "\\b(?<!\\\\)(if|else|match|loop|while|foreach|in|break|next|return|yield|throw|try)\\b"
+                    "match": "\\b(?<!\\\\)(if|else|match|loop|while|foreach|in|break|next|return|yield|throw|try|async|await)\\b"
                 },
                 {
                     "name": "keyword.other.azoth",
@@ -82,7 +82,7 @@
                 },
                 {
                     "name": "keyword.operator.expression.azoth",
-                    "match": "\\b(?<!\\\\)((as\\!|as\\?)|((and|or|not|as|is)\\b))"
+                    "match": "\\b(?<!\\\\)((as\\!|as\\?)|((and|or|not|as|is|go|do)\\b))"
                 },
                 {
                     "name": "keyword.operator.new.azoth",
@@ -232,7 +232,7 @@
         "reserved-words": {
             "patterns": [{
                 "name": "invalid.reserved-word.azoth",
-                "match": "\\b(?<!\\\\)(alias|case|cast|checked|const_cast|continue|default|defer|delete|do|dynamic_cast|extend|extension|fallthrough|for|guard|internal|null|otherwise|package|partial|private|reinterpret_cast|repeat|replace|select|sizeof|size_of|switch|symmetric|transmute|then|type|unchecked|unless|when|xor|yield)\\b"
+                "match": "\\b(?<!\\\\)(alias|case|cast|checked|const_cast|continue|default|defer|delete|dynamic_cast|extend|extension|fallthrough|for|guard|internal|null|otherwise|package|partial|private|reinterpret_cast|repeat|replace|select|sizeof|size_of|switch|symmetric|transmute|then|type|unchecked|unless|when|xor|yield)\\b"
             }]
         },
         "reserved-operators": {
