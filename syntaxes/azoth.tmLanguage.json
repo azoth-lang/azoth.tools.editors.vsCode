@@ -122,21 +122,21 @@
             }]
         },
         "char-literal": {
-            "name": "string.quoted.single.cs",
+            "name": "string.quoted.single.azoth",
             "begin": "'",
             "beginCaptures": {
                 "0": {
-                    "name": "punctuation.definition.char.begin.cs"
+                    "name": "punctuation.definition.char.begin.azoth"
                 }
             },
             "comment": "Need to account for ''' and '\\''",
             "end": "(?:\\'|\\\\)?(\\')|((?:[^\\n])$)",
             "endCaptures": {
                 "1": {
-                    "name": "punctuation.definition.char.end.cs"
+                    "name": "punctuation.definition.char.end.azoth"
                 },
                 "2": {
-                    "name": "invalid.illegal.newline.cs"
+                    "name": "invalid.illegal.newline.azoth"
                 }
             },
             "patterns": [{
@@ -188,22 +188,22 @@
         },
         "comments": {
             "patterns": [{
-                    "name": "comment.block.cs",
+                    "name": "comment.block.azoth",
                     "begin": "/\\*",
                     "beginCaptures": {
                         "0": {
-                            "name": "punctuation.definition.comment.cs"
+                            "name": "punctuation.definition.comment.azoth"
                         }
                     },
                     "end": "\\*/",
                     "endCaptures": {
                         "0": {
-                            "name": "punctuation.definition.comment.cs"
+                            "name": "punctuation.definition.comment.azoth"
                         }
                     }
                 },
                 {
-                    "name": "comment.line.double-slash.cs",
+                    "name": "comment.line.double-slash.azoth",
                     "begin": "(?<!/)//(?!/)",
                     "beginCaptures": {
                         "0": {
@@ -213,7 +213,7 @@
                     "end": "(?=$)"
                 },
                 {
-                    "name": "comment.block.documentation.cs",
+                    "name": "comment.block.documentation.azoth",
                     "begin": "(?<!/)///(?!/)",
                     "beginCaptures": {
                         "0": {
