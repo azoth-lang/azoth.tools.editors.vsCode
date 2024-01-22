@@ -8,6 +8,9 @@
             "include": "#operators"
         },
         {
+            "include": "#identifier-string"
+        },
+        {
             "include": "#string-literal"
         },
         {
@@ -102,13 +105,20 @@
                 }
             ]
         },
+        "identifier-string": {
+            "name": "entity.name",
+            "begin": "\\\"",
+            "end": "\"",
+            "patterns": [{
+                "include": "#string-character-escape"
+            }]
+        },
         "string-literal": {
             "name": "string.quoted.double.azoth",
             "begin": "(?<!\\\\)\"",
             "end": "\"",
             "patterns": [{
-                "name": "constant.character.escape.azoth",
-                "match": "\\\\."
+                "include": "#string-character-escape"
             }]
         },
         "char-literal": {
@@ -134,7 +144,7 @@
             }]
         },
         "string-character-escape": {
-            "name": "constant.character.escape.cs",
+            "name": "constant.character.escape.azoth",
             "match": "\\\\."
         },
         "modifiers": {
