@@ -36,7 +36,7 @@
         "keywords": {
             "patterns": [{
                     "name": "keyword.control.azoth",
-                    "match": "\\b(?<!\\\\)(if|else|match|loop|while|foreach|in|out|break|next|return|yield|throw|try|async|await)\\b"
+                    "match": "\\b(?<!\\\\)(if|else|match|loop|while|foreach|break|next|return|yield|throw|try|async|await)\\b"
                 },
                 {
                     "name": "keyword.other.azoth",
@@ -154,7 +154,7 @@
                 },
                 {
                     "name": "storage.modifier.azoth",
-                    "match": "\\b(?<!\\\\)(iso|mut|const|id|lent)\\b"
+                    "match": "\\b(?<!\\\\)(iso|mut|const|id|lent|in|out|ind)\\b"
                 }
             ]
         },
