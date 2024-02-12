@@ -154,7 +154,7 @@
                 },
                 {
                     "name": "storage.modifier.azoth",
-                    "match": "\\b(?<!\\\\)(iso|mut|const|id|temp|readable|lent|in|out|ind)\\b"
+                    "match": "\\b(?<!\\\\)(iso|mut|read|const|id|temp|readable|lent|in|out|ind)\\b"
                 }
             ]
         },
