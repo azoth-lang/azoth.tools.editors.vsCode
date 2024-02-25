@@ -153,8 +153,24 @@
                     "match": "\\b(?<!\\\\)(published|public|protected)\\b"
                 },
                 {
-                    "name": "storage.modifier.azoth",
-                    "match": "\\b(?<!\\\\)(iso|mut|read|const|id|temp|readable|lent|in|out|ind)\\b"
+                    "name": "storage.modifier.capability.azoth",
+                    "match": "\\b(?<!\\\\)(iso|mut|read|const|id|temp)\\b"
+                },
+                {
+                    "name": "storage.modifier.constraint.azoth",
+                    "match": "\\b(?<!\\\\)(readable|shareable|aliasable|sendable|any)\\b"
+                },
+                {
+                    "name": "storage.modifier.variance.azoth",
+                    "match": "\\b(?<!\\\\)(in|out)\\b"
+                },
+                {
+                    "name": "storage.modifier.independence.azoth",
+                    "match": "\\b(?<!\\\\)(ind)\\b"
+                },
+                {
+                    "name": "storage.modifier.parameters.azoth",
+                    "match": "\\b(?<!\\\\)(lent)\\b"
                 }
             ]
         },
