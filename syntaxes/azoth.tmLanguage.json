@@ -60,7 +60,7 @@
                 },
                 {
                     "name": "keyword.type.azoth",
-                    "match": "\\b(?<!\\\\)(bool|string|u?int\\d*|byte|float\\d*|u?fixed\\d+\\.\\d+|decimal\\d*|size|offset|void|never|Self|Any|type)\\b"
+                    "match": "\\b(?<!\\\\)(bool|string|u?int\\d*|byte|float\\d*|u?fixed\\d+\\.\\d+|decimal\\d*|size|offset|nint|nuint|void|never|Self|Any|type)\\b"
                 },
                 {
                     "name": "variable.language.azoth",
