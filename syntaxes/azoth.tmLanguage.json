@@ -162,7 +162,7 @@
                 },
                 {
                     "name": "storage.modifier.variance.azoth",
-                    "match": "\\b(?<!\\\\)(in|out)\\b"
+                    "match": "\\b(?<!\\\\)(in|out|nonwritable)\\b"
                 },
                 {
                     "name": "storage.modifier.independence.azoth",
