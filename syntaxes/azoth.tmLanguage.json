@@ -43,8 +43,8 @@
                     "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy)\\b"
                 },
                 {
-                    "name": "keyword.other.using.azoth",
-                    "match": "\\b(?<!\\\\)(using)\\b"
+                    "name": "keyword.other.import.azoth",
+                    "match": "\\b(?<!\\\\)(import)\\b"
                 },
                 {
                     "name": "keyword.modifier.azoth",
