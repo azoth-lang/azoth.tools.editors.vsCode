@@ -40,7 +40,7 @@
                 },
                 {
                     "name": "keyword.other.azoth",
-                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy)\\b"
+                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|init|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy|ref|iref)\\b"
                 },
                 {
                     "name": "keyword.other.import.azoth",
@@ -86,10 +86,6 @@
                 {
                     "name": "keyword.operator.expression.azoth",
                     "match": "\\b(?<!\\\\)((as\\!|as\\?)|((and|or|not|as|is|go|do)\\b))"
-                },
-                {
-                    "name": "keyword.operator.new.azoth",
-                    "match": "\\b(?<!\\\\)(new|init)\\b"
                 },
                 {
                     "name": "keyword.operator.arithmetic.azoth",
