@@ -226,7 +226,7 @@
                 },
                 {
                     "name": "comment.block.documentation.azoth",
-                    "begin": "(?<!/)///(?!/)",
+                    "begin": "(?<!/)///",
                     "beginCaptures": {
                         "0": {
                             "name": "punctuation.definition.comment.azoth"
