@@ -154,7 +154,7 @@
                 },
                 {
                     "name": "storage.modifier.constraint.azoth",
-                    "match": "\\b(?<!\\\\)(readable|shareable|aliasable|sendable|any)\\b"
+                    "match": "\\b(?<!\\\\)(readable|shareable|aliasable|sendable|temporary|any)\\b"
                 },
                 {
                     "name": "storage.modifier.variance.azoth",
