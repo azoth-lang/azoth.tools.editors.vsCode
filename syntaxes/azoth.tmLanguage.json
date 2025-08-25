@@ -40,7 +40,7 @@
                 },
                 {
                     "name": "keyword.other.azoth",
-                    "match": "\\b(?<!\\\\)(let|var|class|struct|trait|enum|fn|init|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy|ref|iref)\\b"
+                    "match": "\\b(?<!\\\\)(let|var|class|struct|value|trait|enum|fn|init|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy|ref|iref)\\b"
                 },
                 {
                     "name": "keyword.other.import.azoth",
