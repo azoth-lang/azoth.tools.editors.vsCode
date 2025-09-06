@@ -40,7 +40,7 @@
                 },
                 {
                     "name": "keyword.other.azoth",
-                    "match": "\\b(?<!\\\\)(let|var|class|struct|value|trait|enum|fn|init|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|move|freeze|copy|ref|iref)\\b"
+                    "match": "\\b(?<!\\\\)(let|var|class|struct|value|trait|enum|fn|init|get|set|where|namespace|external|uninitialized|operator|implicit|extend|params|old|drop|move|freeze|copy|ref|iref)\\b"
                 },
                 {
                     "name": "keyword.other.import.azoth",
@@ -150,7 +150,7 @@
                 },
                 {
                     "name": "storage.modifier.capability.azoth",
-                    "match": "\\b(?<!\\\\)(iso|mut|read|const|id|temp)\\b"
+                    "match": "\\b(?<!\\\\)(iso|own|mut|read|const|id|temp)\\b"
                 },
                 {
                     "name": "storage.modifier.constraint.azoth",
