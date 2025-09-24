@@ -154,11 +154,11 @@
                 },
                 {
                     "name": "storage.modifier.constraint.azoth",
-                    "match": "\\b(?<!\\\\)(readable|shareable|aliasable|sendable|temporary|any)\\b"
+                    "match": "\\b(?<!\\\\)(readable|shareable|aliasable|readonly|sendable|temporary|any)\\b"
                 },
                 {
                     "name": "storage.modifier.variance.azoth",
-                    "match": "\\b(?<!\\\\)(in|out|nonwritable)\\b"
+                    "match": "\\b(?<!\\\\)(in|out|readonly)\\b"
                 },
                 {
                     "name": "storage.modifier.independence.azoth",
